@@ -4,7 +4,7 @@ import random
 import boto3
 
 STREAM_NAME = "input-stream"
-endpoint_url = "http://localhost.localstack.cloud:4566"
+endpoint_url = "http://host.docker.internal:4566"
 
 def get_data():
     return {

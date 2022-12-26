@@ -12,7 +12,7 @@
       "input.stream.name": "input-stream",
       "flink.stream.initpos": "LATEST",
       "aws.region": "us-east-1",
-      "aws.endpoint": "http://localhost:4566"
+      "aws.endpoint": "http://host.docker.internal:4566"
     }
   },
   {
@@ -21,7 +21,7 @@
       "output.stream.name": "output-stream",
       "shard.count": "1",
       "aws.region": "us-east-1",
-      "aws.endpoint": "http://localhost:4566"
+      "aws.endpoint": "http://host.docker.internal:4566"
     }
   }
 ]
