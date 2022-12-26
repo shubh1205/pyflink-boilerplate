@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack}"
+    image: localstack/localstack
+    hostname: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=sqs,sns,kinesis
+      - DEBUG=1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - HOST_TMP_FOLDER=${TMPDIR}
+      - HOSTNAME_EXTERNAL=localstack
+    volumes:
+      - ./data:/var/lib/localstack
+      - "/var/run/docker.sock:/var/run/docker.sock"
